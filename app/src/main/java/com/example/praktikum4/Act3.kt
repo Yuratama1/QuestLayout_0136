@@ -25,7 +25,6 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import java.lang.reflect.Modifier
 
 @Composable
 fun ActivitasPertama(modifier: Modifier){
@@ -35,12 +34,12 @@ fun ActivitasPertama(modifier: Modifier){
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Text(
-            stringResource(id = R.string.prodi),
+            text = stringResource(id = R.string.prodi),
             fontSize = 35.sp,
             fontWeight = FontWeight.Bold
         )
         Text(
-            stringResource(id = R.string.univ),
+            text = stringResource(id = R.string.univ),
             fontSize = 22.sp
         )
         Spacer(modifier = Modifier.height(25.dp))
@@ -64,7 +63,7 @@ fun ActivitasPertama(modifier: Modifier){
                 Spacer(modifier = Modifier.width(30.dp))
                 Column {
                     Text(
-                        stringResource("Yuratama Fadhilah Nugroho"),
+                        text = stringResource(R.string.nama),
                         fontSize = 30.sp,
                         fontFamily = FontFamily.Cursive,
                         color = Color.White,
@@ -76,18 +75,18 @@ fun ActivitasPertama(modifier: Modifier){
                         color = Color.Yellow,
                         modifier = Modifier.padding(top = 10.dp)
                     )
-                    Box(
-                        modifier = Modifier.fillMaxSize()
-                    ) {
-                        Text(
-                            stringResource(id = R.string.copy),
-                            modifier = Modifier
-                                .align(Alignment.BottomCenter)
-                                .padding(bottom = 50.dp)
-                        )
-                    }
                 }
             }
+        }
+        Box(
+            modifier = Modifier.fillMaxSize()
+        ) {
+            Text(
+                stringResource(id = R.string.copy),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 50.dp)
+            )
         }
     }
 }
